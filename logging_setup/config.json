@@ -1,0 +1,26 @@
+{
+    "version": 1, 
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s %(levelname)s [From: %(pathname)s, L%(lineno)s, %(funcName)s]: %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        }
+    },
+    "handlers": {
+        "stream": {
+            "class": "logging.StreamHandler", 
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "loggers": {
+        "orderapp": {
+            "level": "DEBUG",
+            "handlers": [
+                "stream"
+            ]
+        }
+    }
+}
